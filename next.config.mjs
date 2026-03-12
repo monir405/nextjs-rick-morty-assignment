@@ -3,7 +3,9 @@ const nextConfig = {
   /* config options here */
   reactCompiler: true,
   output: 'export',
-  unoptimized: true,
+  image:{
+    unoptimized: true
+  }
 
 };
 
