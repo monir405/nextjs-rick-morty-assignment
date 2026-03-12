@@ -2,6 +2,9 @@
 const nextConfig = {
   /* config options here */
   reactCompiler: true,
+  output: 'export',
+  unoptimized: true,
+
 };
 
 export default nextConfig;
