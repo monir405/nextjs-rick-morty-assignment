@@ -1,8 +1,8 @@
 import Character from "@/app/components/Character";
 
-export default async function CharacterDetail(props) {
-    const {id} = await props.params;
-    const res = await fetch(`https://rickandmortyapi.com/api/character/${id}`);
+export default async function CharacterDetail({params}) {
+    const {id} =  params;
+    const res = await fetch(`http://localhost:3000/api/characters/${id}`);
      if (!res.ok){
         throw new Error("Failed to fetch");
     }
