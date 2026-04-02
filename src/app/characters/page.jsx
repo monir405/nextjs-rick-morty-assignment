@@ -9,7 +9,7 @@ export default async function Characters() {
     return (
         <main>
             <h1>
-                Characters
+                Character List
             </h1>
             <ul>
                 {data.map((character) => (
