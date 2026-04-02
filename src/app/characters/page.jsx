@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export default async function Characters() {
-    const res = await fetch ("https://rickandmortyapi.com/api/character")
+    const res = await fetch("http://localhost:3000/api/characters")
     if (!res.ok){
         throw new Error("Failed to fetch");
     }
@@ -12,10 +12,10 @@ export default async function Characters() {
                 Character List
             </h1>
             <ul>
-                {data.results.map((character) => (
-                    <li key = {character.id}>
+                {data.map((character) => (
+                    <li key = {character._id}>
                         <Link
-                            href = {`/characters/${character.id}`}
+                            href = {`/characters/${character._id}`}
                         >
                             {character.name}
                         </Link>
